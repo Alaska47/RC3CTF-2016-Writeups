@@ -2,7 +2,7 @@
 > Problem description here
 
 #Solution
-The problem originally gave us a [memory dump](https://drive.google.com/file/d/0Bw7N3lAmY5PCUWExQUJVZGVySXc/view), and later in the competition, a [zip file](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/forensics/500-Get-Schwifty/supersecret.zip). Using a tool called volatility (`sudo apt-get install volatility`), we can analyze the memory dump to extract the TrueCrypt container and password.
+The problem originally gave us a [memory dump](https://drive.google.com/file/d/0Bw7N3lAmY5PCUWExQUJVZGVySXc/view), and later in the competition, a [rar file](https://drive.google.com/file/d/0Bw7N3lAmY5PCODdpeTJPZjJjVUk/view). Using a tool called volatility (`sudo apt-get install volatility`), we can analyze the memory dump to extract the TrueCrypt container and password.
 
 The first thing I ran was `volatility imageinfo -f dump.raw` (WARNING: the command took me a while to run so don't quit if you don't see anything) in order to figure out the profile (OS) which is necessary to run other commands. Running the command tells us that the most likely profile is `Win7SP0x64`, so we can use that for additional commands.
 
@@ -22,7 +22,7 @@ Searching up how to extract LastPass passwords using volatility revealed this [l
 
 ![lastpass.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/forensics/500-Get-Schwifty/lastpass.png)
 
-Now that I had the TrueCrypt container password `VNBLnVqeqpBWnnr8bdR7iLehx`, all I needed to do was open the TrueCrypt container. Looking at the zip file and extracting it, I found `supersecret.docx`. I suspected that was the TrueCrypt container and I realized my suspicions were right after I ran TCHunt on the zip file, revealing that supersecret.docx was indeed a TrueCrypt container. All that is left to do was to mount the TrueCrypt container. The flag is shown in the image below (NOTE: you don't need to enter anything for the keyfile).
+Now that I had the TrueCrypt container password `VNBLnVqeqpBWnnr8bdR7iLehx`, all I needed to do was open the TrueCrypt container. Looking at the rar file and extracting it, I found `supersecret.docx`. I suspected that was the TrueCrypt container and I realized my suspicions were right after I ran TCHunt on the rar file, revealing that supersecret.docx was indeed a TrueCrypt container. All that is left to do was to mount the TrueCrypt container. The flag is shown in the image below (NOTE: you don't need to enter anything for the keyfile).
 
 ![flag.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/forensics/500-Get-Schwifty/flag.png)
 
