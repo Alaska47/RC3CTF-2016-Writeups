@@ -2,7 +2,7 @@
 > Problem description here
 
 #Solution
-The problem originally gave us a [memory dump](https://drive.google.com/file/d/0Bw7N3lAmY5PCUWExQUJVZGVySXc/view), and later in the competition, a [rar file](https://drive.google.com/file/d/0Bw7N3lAmY5PCODdpeTJPZjJjVUk/view). Using a tool called volatility (`sudo apt-get install volatility`), we can analyze the memory dump to extract the TrueCrypt container and password.
+The problem originally gave us a [memory dump](https://drive.google.com/file/d/0Bw7N3lAmY5PCdVYzMDdqS2E2MzA/view), and later in the competition, a [rar file](https://drive.google.com/file/d/0Bw7N3lAmY5PCODdpeTJPZjJjVUk/view). Using a tool called volatility (`sudo apt-get install volatility`), we can analyze the memory dump to extract the TrueCrypt container and password.
 
 The first thing I ran was `volatility imageinfo -f dump.raw` (WARNING: the command took me a while to run so don't quit if you don't see anything) in order to figure out the profile (OS) which is necessary to run other commands. Running the command tells us that the most likely profile is `Win7SP0x64`, so we can use that for additional commands.
 
