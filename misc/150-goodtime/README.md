@@ -1,6 +1,6 @@
 #150 - Goodtime
 
->Problem description here
+>We were given a youtube [link](https://www.youtube.com/watch?v=H7HmzwI67ec) to the song Good Time by Owl City & Carly Rae Jepsen and `nc goodtime.ctf.rc3.club 5866`
 
 #Solution
 
