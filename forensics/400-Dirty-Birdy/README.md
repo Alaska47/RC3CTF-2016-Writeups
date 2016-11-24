@@ -1,6 +1,6 @@
 #400 - Dirty Birdy
 
->We were given a  ![dump](https://github.com/RITC3/RC3CTF-2016/blob/master/Forensics/Forensics-400/dtrump.img.zip)
+>We were given a  [dump](https://github.com/RITC3/RC3CTF-2016/blob/master/Forensics/Forensics-400/dtrump.img.zip)
 
 #Solution
 
@@ -37,19 +37,30 @@ First we extract the image and mount it. We then start examining the files for a
    37  history -c
 ```
 
-We see that this person created a secretfiles directory. Then, we see that he used ![gpg](https://www.gnupg.org/documentation/manpage.html) to create a key and encrypt an excel file. Then deleted the original excel file, opened and presumably edited document.txt. He then exported the gpg key he used to encrypt the excel file and uploaded it onto a git repository.
+We see that this person created a secretfiles directory. Then, we see that he used [gpg](https://www.gnupg.org/documentation/manpage.html) to create a key and encrypt an excel file. Then deleted the original excel file, opened and presumably edited document.txt. He then exported the gpg key he used to encrypt the excel file and uploaded it onto a git repository.
+
 We see that there is a folder named SECRETFI. This is probably the directory that this person created. We cd into it and start looking at the files.
+
 We see the encrypted WORKBOOK.GPG that we will probably need to decrypt.
 We quickly look in document.txt and find:
+
 `passowrd123`
+
 After reading a bit about gpg, we found that we need the key that was used to encrypt it. So we look inside the `_GIT` folder and look inside the `CONFIG` file to find a link to a git repository.
+
 `https://github.com/rc3club/supersecret.git`
+
 We click it and find private.key. We can now use this to decrypt `WORKBOOK.GPG`!!!
 We cd into the directory with `private.key` and `WORKBOOK.GPG` then run the following command:
+
 `gpg --import private.key`
+
 This imports the private key which we can now use to decrypt `WORKBOOK.GPG`
+
 `gpg -d WORKBOOK.GPG > workbook.xlsx`
+
 Now we have the decrypted excel file. We open it and find a password prompt. This must be the password in document.txt! So we input `passowrd123` and it didn't work! But turns out they made a typo and the actual password was `password123`
+
 We open the excel file and click on Sheet2 to find the flag.
 
 #Flag
