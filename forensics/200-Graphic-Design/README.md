@@ -6,10 +6,10 @@ We are giving an `.obj` file which is a 3D Object file. Opening it up in any 3D 
 
 ![stego1.png]()
 
-Looking at the 3D model, I started playing around with it. Its mouth was open, so I decided to try zooming in on its mouth to see if I could get inside. Suprisingly, there was some text inside the model! Playing with the zoom settings and maneuvering around reveals the entire flag.
+At first, I was using a random 3D modelling software that I found on the Windows Store with 0 additional features. Finding "3D Builder" useless, I decided to switch to a more featured 3D modelling software, [Open 3D Model Viewer](http://www.open3mod.com/). After opening it in that software, I found some text inside the dinosaur. Zooming in more closely revealed the flag shown below.
 
 ![flag.png]()
 
 #Flag
-
+RC3-2016-St3GG3rz
 
