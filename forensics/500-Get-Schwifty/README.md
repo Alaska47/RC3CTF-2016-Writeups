@@ -14,7 +14,7 @@ The next thing I ran was `volatility --profile=Win7SP0x64 -f dump.raw pslist` in
 
 Doing a quick google search on how to view chrome history takes us to this [link](http://blog.superponible.com/2014/08/31/volatility-plugin-chrome-history/). After I downloaded and saved the plugins, I ran `volatility --plugins=/home/aneesh/v-plugin/chrome --profile=Win7SP0x64 -f dump.raw chromehistory` (WARNING: the command took me a while to run so don't quit if you don't see anything) where `/home/aneesh/v-plugin/chrome` is the directory in which I saved the `.py` file. Unfortunately the command didn't output anything for me, but taking a look at the other plugins, I decided to run `chromesearchterms`. 
 
-The output of `volatility --plugins=/home/aneesh/v-plugin/chrome --profile=Win7SP0x64 -f dump.raw chromehistory`, shown below, reveals several interesting things. The user searched up `truecrypt` and `lastpass` several times, leading me to suspect whether the password to the TrueCrypt container was in LastPass.
+The output of `volatility --plugins=/home/aneesh/v-plugin/chrome --profile=Win7SP0x64 -f dump.raw chromesearchterms`, shown below, reveals several interesting things. The user searched up `truecrypt` and `lastpass` several times, leading me to suspect whether the password to the TrueCrypt container was in LastPass.
 
 ![chrome_extension.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/forensics/500-Get-Schwifty/chrome_extension.png)
 
