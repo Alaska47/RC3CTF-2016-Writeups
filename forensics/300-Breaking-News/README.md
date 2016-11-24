@@ -1,7 +1,7 @@
 #300 - Breaking News
 
 >We just received this transmission from our news correspondents. We need to find out what they are telling us.
->![file](https://github.com/Alaska47/RC3CTF-2016-Writeups/blob/master/forensics/300-Breaking-News/Forensics-300.tar.gz)
+>[file](https://github.com/Alaska47/RC3CTF-2016-Writeups/blob/master/forensics/300-Breaking-News/Forensics-300.tar.gz)
 
 #Solution
 We first extract the give file, `Forensics-300.tar.gz`, and we find 20 zip files inside of it. We then extract all of these and find that each of them contain a .txt file.
