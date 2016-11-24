@@ -20,4 +20,4 @@ Next, clicking on `RX/TX Screen` reveals another window with many buttons. Again
 ![flag.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/misc/400-Music-to-my-Ears/flag.png)
 
 #Flag
-RC3-CTF-BEAMMeUP
+RC3-2016-BEAMMeUP
