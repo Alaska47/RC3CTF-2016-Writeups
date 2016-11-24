@@ -6,7 +6,7 @@ The problem gives us an `.aup` file, which is an Audacity Project file. Opening 
 
 ![spectrogram.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/misc/400-Music-to-my-Ears/spectrogram.png)
 
-Next I took a look at the problem. It mentions Sirius XM, which is a broadcasting company for radio signals. The problem also talks about signals. I figured the `whoa` track might be a radio signal which I could then decode. A quick Google search for `radio signal database` revealed a [database]() for radio signals. I went through all the signals usually looking at the spectrogram, and if the beginning looks similar to the one I’m looking for, I would play the sound recording to see the header.
+Next I took a look at the problem. It mentions Sirius XM, which is a broadcasting company for radio signals. The problem also talks about signals. I figured the `whoa` track might be a radio signal which I could then decode. A quick Google search for `radio signal database` revealed a [database](http://www.sigidwiki.com/wiki/Database) for radio signals. I went through all the signals usually looking at the spectrogram, and if the beginning looks similar to the one I’m looking for, I would play the sound recording to see the header.
 
 Eventually after going all the down to the S’s, I came across Slow-Scan Television, which was a 
 
