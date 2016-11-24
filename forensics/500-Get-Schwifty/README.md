@@ -8,7 +8,7 @@ The first thing I ran was `volatility imageinfo -f dump.raw` (WARNING: the comma
 
 Realizing that I was looking for a TrueCrypt container and its password, I tried running several commands such as `truecryptsummary` and `truecryptpassphrase` which revealed nothing about the container or its password.
 
-The next thing I ran was `volatility --profile="Win7SP0x64 -f dump.raw pslist"` in order to find what processes were running when the memory was dumped. The output is shown below. Taking a quick look at the processes reveals that several instances of `chrome.exe` were running when the memory was dumped.
+The next thing I ran was `volatility --profile=Win7SP0x64 -f dump.raw pslist` in order to find what processes were running when the memory was dumped. The output is shown below. Taking a quick look at the processes reveals that several instances of `chrome.exe` were running when the memory was dumped.
 
 ![pslist.png](https://raw.githubusercontent.com/Alaska47/RC3CTF-2016-Writeups/master/forensics/500-Get-Schwifty/pslist.png)
 
