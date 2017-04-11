@@ -1,14 +1,14 @@
-#100 - Salad
+# 100 - Salad
 
-##Problem Statement
+## Problem Statement
 
 “The fault, dear Brutus, is not in our stars, but in ourselves.” (I.ii.141) Julius Caesar in William Shakespeare’s Julius Caesar Cipher Text: 7sj-ighm-742q3w4t
 
-##Overview
+## Overview
 
 Decrypt a Caesar cipher with a custom alphabet
 
-##Solution
+## Solution
 
 From the problem statement, we can reasonably infer that the ciphertext is to be decrypted in a manner similar to that of a caesar cipher.  However, since the flag has to begin with uppercase "RC3-2016", we conclude that a custom alphabet was used for encryption.  We take a look at the charset of the ciphertext (excluding the dashes - those don't get shifted), and find that it fits within 
     
@@ -41,6 +41,6 @@ Running it returns the flag:
 RC3-2016-ROMANGOD
 
 
-##Flag
+## Flag
 
     RC3-2016-ROMANGOD
